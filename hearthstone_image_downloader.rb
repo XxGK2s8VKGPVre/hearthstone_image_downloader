@@ -12,7 +12,7 @@ def download_image(url, destination)
   end
 end
 
-for i in 0..thumnail.urls.size
+for i in 0..thumbnail_urls.size-1
   @driver.get thumbnail_urls[i]
   url = @driver.find_element(:class, 'internal').attribute('href')
   download_image(url, url.split('/').last)
