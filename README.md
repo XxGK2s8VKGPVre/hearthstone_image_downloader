@@ -8,8 +8,9 @@ Setup
 1. Download phantomjs and put it on your path. If you have npm I recommend this command in your terminal 'npm install -g phantomjs-prebuilt'
 2. Start phantomjs by using this command in your terminal 'phantomjs --webdriver=8001'
 3. Use the version of ruby found in the .ruby-version file. I recommend doing this with .rbenv but this isn't necessary.
-4. Add the thumbnail urls you want to 'hearthstone_image_downloader.rb' script.
-5. From the directory the script is in run this command in your terminal 'ruby hearthstone_image_downloader.rb'
+4. Add the selenium-webdriver gem with this command in your terminal 'gem install selenium-webdriver'.
+5. Add the thumbnail urls you want to 'hearthstone_image_downloader.rb' script.
+6. From the directory the script is in run this command in your terminal 'ruby hearthstone_image_downloader.rb'
 
 Errors: There are a ton of js errors on the Gamepedia page and phantomjs periodically tries to clean up sessions. These can crash your script or phantomjs. To recover restart phantomjs and modify the script to pick up at the file you left off.
 
