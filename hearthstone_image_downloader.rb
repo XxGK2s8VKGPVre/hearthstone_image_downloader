@@ -3,7 +3,7 @@ require 'selenium-webdriver'
 
 @driver = Selenium::WebDriver.for :remote, url:'http://localhost:8001'
 
-thumbnail_pages = ["https://hearthstone.gamepedia.com/File:Activate!_full.png"]
+thumbnail_urls = ["https://hearthstone.gamepedia.com/File:Activate!_full.png"]
 # example thumbnail page shown, you will need to populate this with the urls for the thumbnails of the images you want
 
 def download_image(url, destination)
@@ -12,8 +12,8 @@ def download_image(url, destination)
   end
 end
 
-for i in 21..208
-  @driver.get thumbnail_pages[i]
+for i in 0..thumnail.urls.size
+  @driver.get thumbnail_urls[i]
   url = @driver.find_element(:class, 'internal').attribute('href')
   download_image(url, url.split('/').last)
 end
