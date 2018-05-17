@@ -15,3 +15,5 @@ Setup
 Errors: There are a ton of js errors on the Gamepedia page and phantomjs periodically tries to clean up sessions. These can crash your script or phantomjs. To recover restart phantomjs and modify the script to pick up at the file you left off.
 
 File Destination: the files will be downloaded into the directory you have this script. You can easily modify this.
+
+For some reason the last time I downloaded files, they were downloading with some extra cruft at the end, I removed this via the following bash command: for f in *.jpg*; do mv "$f" "${f/.*}.jpg"; done
